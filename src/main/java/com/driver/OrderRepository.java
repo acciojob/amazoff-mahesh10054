@@ -5,22 +5,23 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class OrderRepository {
 
     //orderId , Order   ordersDb
-    HashMap<String,Order> hm1 = new HashMap<>();
+    Map<String,Order> hm1 = new HashMap<>();
 
     //partnerId, DeliveryPartner     deliveryPartnersDb
-    HashMap<String,DeliveryPartner> hm2 = new HashMap<>();
+    Map<String,DeliveryPartner> hm2 = new HashMap<>();
 
     //partnerId, Order List    partnerOrdersDb
-    HashMap<String,List<String>> hm3 = new HashMap<>();
+    Map<String,List<String>> hm3 = new HashMap<>();
 
     //unassigned-orders
     //orderId, partnerId      orderPartnerDb
-    HashMap<String,String> hm4 = new HashMap<>();
+    Map<String,String> hm4 = new HashMap<>();
 
     public void addOrder(Order order) {
         hm1.put(order.getId(),order);
